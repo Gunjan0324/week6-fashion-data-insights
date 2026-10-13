@@ -1,0 +1,143 @@
+{
+  "raw_rows": 5052,
+  "duplicates_removed": 60,
+  "missing_marketing": 90,
+  "clean_rows": 4992,
+  "total_revenue": 13032618.5,
+  "net_revenue": 11193827.0,
+  "overall_return_rate": 0.14029511432918682,
+  "rev_by_category": {
+    "Outerwear": 3596352.0,
+    "Denim": 2780792.0,
+    "Dresses": 2625186.0,
+    "Activewear": 2099943.0,
+    "Tops": 1236597.5,
+    "Accessories": 693748.0
+  },
+  "peak_month": {
+    "Accessories": 11,
+    "Activewear": 1,
+    "Denim": 11,
+    "Dresses": 7,
+    "Outerwear": 11,
+    "Tops": 11
+  },
+  "discount_table": {
+    "0%": {
+      "avg_units": 45.9,
+      "return_rate_pct": 12.7
+    },
+    "10%": {
+      "avg_units": 53.2,
+      "return_rate_pct": 12.86
+    },
+    "20%": {
+      "avg_units": 68.9,
+      "return_rate_pct": 14.16
+    },
+    "30%": {
+      "avg_units": 72.8,
+      "return_rate_pct": 15.29
+    }
+  },
+  "channel": {
+    "Online": {
+      "revenue": 7130849.0,
+      "return_rate_pct": 17.158364302555697
+    },
+    "Store": {
+      "revenue": 5901769.5,
+      "return_rate_pct": 10.273038077912302
+    }
+  },
+  "return_rate_by_category": {
+    "Dresses": 18.09798733060701,
+    "Outerwear": 13.528800646427335,
+    "Denim": 13.352478242760373,
+    "Accessories": 13.201162965562183,
+    "Activewear": 13.10412355897133,
+    "Tops": 12.761698962060292
+  },
+  "train_rows": 3840,
+  "test_rows": 1152,
+  "regression_results": {
+    "Baseline (mean)": {
+      "MAE": 22.19394576461227,
+      "RMSE": 29.978992664078728,
+      "R2": -0.15550238585686316,
+      "WAPE_pct": 34.31500714129132
+    },
+    "Linear Regression": {
+      "MAE": 16.696448642105924,
+      "RMSE": 21.35510654260938,
+      "R2": 0.4136725056193674,
+      "WAPE_pct": 25.815092118572537
+    },
+    "Random Forest": {
+      "MAE": 9.334922520184715,
+      "RMSE": 12.240198936618672,
+      "R2": 0.8073745228574025,
+      "WAPE_pct": 14.433122273115359
+    },
+    "Gradient Boosting": {
+      "MAE": 10.897380492263347,
+      "RMSE": 13.920999363272525,
+      "R2": 0.7508404131683342,
+      "WAPE_pct": 16.848905254586587
+    }
+  },
+  "best_model": "Random Forest",
+  "cv_r2_folds": [
+    0.47072548922651847,
+    -0.4929036943381264,
+    0.6814961263651435,
+    0.8419300757785252,
+    0.7959456979560737
+  ],
+  "cv_r2_mean": 0.45943873899762694,
+  "cv_r2_std": 0.4931388324776261,
+  "weekly_agg_wape_pct": 8.38263783436892,
+  "top_features": {
+    "discount": 0.20681633735682134,
+    "weekofyear": 0.19765271517093738,
+    "list_price": 0.1633816835003374,
+    "month": 0.09525694277013579,
+    "marketing_spend": 0.06948292660898386,
+    "category_Dresses": 0.0635268169575046,
+    "category_Outerwear": 0.05494175063890495,
+    "holiday_week": 0.052433510784503104
+  },
+  "classification_results": {
+    "Baseline (majority)": {
+      "Accuracy": 0.4904513888888889,
+      "Precision": 0.0,
+      "Recall": 0.0,
+      "F1": 0.0,
+      "ROC_AUC": 0.5
+    },
+    "Logistic Regression": {
+      "Accuracy": 0.734375,
+      "Precision": 0.71850699844479,
+      "Recall": 0.787052810902896,
+      "F1": 0.751219512195122,
+      "ROC_AUC": 0.8084425080279206
+    },
+    "Random Forest": {
+      "Accuracy": 0.7473958333333334,
+      "Precision": 0.7402597402597403,
+      "Recall": 0.7768313458262351,
+      "F1": 0.7581047381546134,
+      "ROC_AUC": 0.7922208318885589
+    }
+  },
+  "confusion_matrix_rf": [
+    [
+      405,
+      160
+    ],
+    [
+      131,
+      456
+    ]
+  ]
+}
